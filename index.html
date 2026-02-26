@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Opeyemi OYEBOADE</title>
+  <meta name="description" content="Opeyemi OYEBOADE — Developer & designer crafting thoughtful digital experiences." />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Inter:wght@400;500&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      /* background: hsl(20, 18%, 7%); */
+      background: hsl(0, 100%, 0%);
+      color: hsl(35, 30%, 90%);
+      min-height: 100vh;
+    }
+
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 2rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: -40%;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 600px;
+      height: 600px;
+      background: radial-gradient(circle, hsla(30, 85%, 55%, 0.1) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .hero-name {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: clamp(3rem, 8vw, 6rem);
+      font-weight: 700;
+      letter-spacing: -0.03em;
+      line-height: 1.1;
+      margin-bottom: 1rem;
+      animation: fadeUp 0.8s ease-out both;
+    }
+
+    .hero-name span {
+      color: hsl(30, 85%, 55%);
+    }
+
+    .hero-subtitle {
+      font-size: clamp(1rem, 2.5vw, 1.25rem);
+      color: hsl(25, 12%, 50%);
+      max-width: 480px;
+      line-height: 1.6;
+      margin-bottom: 2.5rem;
+      animation: fadeUp 0.8s ease-out 0.15s both;
+    }
+
+    .hero-button {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 1rem;
+      font-weight: 500;
+      padding: 0.875rem 2.25rem;
+      background: hsl(30, 85%, 55%);
+      color: hsl(20, 18%, 7%);
+      border: none;
+      border-radius: 0.5rem;
+      cursor: pointer;
+      letter-spacing: 0.01em;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      animation: fadeUp 0.8s ease-out 0.3s both;
+    }
+
+    .hero-button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 30px hsla(30, 85%, 55%, 0.25);
+    }
+
+    .hero-button:active {
+      transform: translateY(0);
+    }
+
+    @keyframes fadeUp {
+      from {
+        opacity: 0;
+        transform: translateY(24px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+<body>
+  <section class="hero">
+    <h1 class="hero-name">Hi, I'm <span>Opeyemi OYEBOADE</span></h1>
+    <p class="hero-subtitle">Developer &amp; designer crafting thoughtful digital experiences.</p>
+    <button class="hero-button">View My Projects</button>
+  </section>
+</body>
+</html>
